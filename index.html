@@ -8,7 +8,7 @@
 
 <!-- Open Graph / WhatsApp / Instagram link preview -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="">
+<meta property="og:url" content="https://niya-farhan.vercel.app/">
 <meta property="og:title" content="Niya Binsy &amp; Muhammed Farhan — Wedding Invitation">
 <meta property="og:description" content="You are invited to the wedding celebration of Niya Binsy &amp; Muhammed Farhan, Saturday 22 August 2026 at Chukkans Pukayoor.">
 <meta property="og:image" content="og-image.jpg">
@@ -797,7 +797,7 @@ footer#footer { display: block; margin: 0; padding: 0; }
      OPENING SCREEN
 ========================================================== -->
 <div id="opening">
-  <video id="opening-video" playsinline webkit-playsinline preload="none" muted poster="assets/video-poster.jpg">
+  <video id="opening-video" playsinline webkit-playsinline preload="metadata" muted>
     <source src="assets/opening-video.mp4" type="video/mp4">
   </video>
   <!-- tap to open overlay -->
@@ -1183,7 +1183,36 @@ window.WEDDING_CONFIG = {
     }
 
     openingVideo.muted       = true;
-    openingVideo.currentTime = 0.5;
+    openingVideo.currentTime = 0.001;
+
+    // Show first frame immediately
+    openingVideo.addEventListener('loadeddata', function onLoaded() {
+      openingVideo.classList.add('playing');
+      openingVideo.removeEventListener('loadeddata', onLoaded);
+    });
+    // If already loaded, show immediately
+    if (openingVideo.readyState >= 2) {
+      openingVideo.classList.add('playing');
+    }
+
+    /* ── Start music immediately on tap ─────────────────────── */
+    if (!isPlaying) {
+      if (musicBtn._gainNode && musicBtn._audioCtx) {
+        const ctxNow = musicBtn._audioCtx;
+        musicBtn._gainNode.gain.setValueAtTime(0, ctxNow.currentTime);
+        musicBtn._gainNode.gain.linearRampToValueAtTime(0.45, ctxNow.currentTime + 1.8);
+        audio.play().then(() => {
+          isPlaying = true;
+          disc.classList.add('spinning');
+          musicBtn.classList.remove('needs-tap');
+        }).catch(() => {
+          musicBtn.classList.add('needs-tap');
+          attachAutoRetry();
+        });
+      } else {
+        startMusic();
+      }
+    }
 
     let started        = false;
     const fallbackTimer = setTimeout(() => { if (!started) completeOpening(); }, 7000);
@@ -1191,7 +1220,6 @@ window.WEDDING_CONFIG = {
     openingVideo.addEventListener('playing', function onPlaying() {
       started = true;
       clearTimeout(fallbackTimer);
-      openingVideo.classList.add('playing');
       openingVideo.removeEventListener('playing', onPlaying);
     });
 
@@ -1222,7 +1250,7 @@ window.WEDDING_CONFIG = {
       }, 40);
     }
 
-    // Start wedding music after video
+    // Start wedding music after video (if not already playing)
     if (!isPlaying) {
       if (musicBtn._gainNode && musicBtn._audioCtx) {
         const ctx2 = musicBtn._audioCtx;
