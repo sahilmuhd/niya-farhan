@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Niya Binsy &amp; Muhammed Farhan — Wedding Invitation</title>
+<meta name="description" content="You are invited to the wedding celebration of Niya Binsy &amp; Muhammed Farhan, Saturday 22 August 2026 at Chukkans Pukayoor.">
+
+<!-- Open Graph / WhatsApp / Instagram link preview -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta property="og:title" content="Niya Binsy &amp; Muhammed Farhan — Wedding Invitation">
+<meta property="og:description" content="You are invited to the wedding celebration of Niya Binsy &amp; Muhammed Farhan, Saturday 22 August 2026 at Chukkans Pukayoor.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:secure_url" content="og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Niya Binsy &amp; Muhammed Farhan Wedding Invitation">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Niya Binsy &amp; Muhammed Farhan — Wedding Invitation">
+<meta name="twitter:description" content="You are invited to the wedding celebration of Niya Binsy &amp; Muhammed Farhan, Saturday 22 August 2026 at Chukkans Pukayoor.">
+<meta name="twitter:image" content="og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+
+<style>
+/* ============================================================
+   NIYA & FARHAN — DESIGN TOKENS
+   Islamic wedding invitation — Ivory, Champagne Gold, Sage
+   ============================================================ */
+:root {
+  --ivory:      #FDFAF3;
+  --cream:      #F8F3E8;
+  --beige:      #F2EBD9;
+  --parchment:  #EDE0C4;
+  --gold:       #C9A84C;
+  --gold-light: #E5C97A;
+  --gold-deep:  #A0782A;
+  --gold-soft:  rgba(201,168,76,0.28);
+  --gold-glow:  rgba(201,168,76,0.18);
+  --sage:       #7A8C6E;
+  --sage-light: #A8B99A;
+  --sage-soft:  rgba(122,140,110,0.15);
+  --warm-white: #FFFEF9;
+  --charcoal:   #2C2417;
+  --charcoal-soft: rgba(44,36,23,0.6);
+  --charcoal-faint: rgba(44,36,23,0.35);
+  --line:       rgba(201,168,76,0.22);
+
+  --display:    'Cormorant Garamond', serif;
+  --deco:       'Playfair Display', serif;
+  --arabic:     'Amiri', serif;
+  --body:       'Poppins', sans-serif;
+
+  --ease-lux:   cubic-bezier(.16,.84,.44,1);
+  --dur-slow:   1.4s;
+  --dur-med:    .9s;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: auto; }
+body {
+  font-family: var(--body);
+  background: var(--cream);
+  color: var(--charcoal);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; background: none; border: none; }
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--gold-soft); color: var(--charcoal); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* ============================================================
+   SHARED ELEMENTS
+   ============================================================ */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Gold ornamental divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px auto;
+}
+.ornament-line {
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+.ornament-diamond {
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.ornament-sm .ornament-line { width: 36px; }
+.ornament-sm .ornament-diamond { width: 5px; height: 5px; }
+
+/* Arabic text style */
+.arabic-text {
+  font-family: var(--arabic);
+  font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+  color: var(--gold-deep);
+  line-height: 1.9;
+  direction: rtl;
+  text-align: center;
+}
+.arabic-text.large {
+  font-size: clamp(1.3rem, 4.5vw, 2rem);
+}
+.arabic-text.bismillah {
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  color: var(--gold-deep);
+  font-weight: 700;
+}
+
+/* Gold button */
+.gold-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: clamp(12px,3vw,16px) clamp(24px,5vw,44px);
+  border: 1.5px solid var(--gold);
+  border-radius: 999px;
+  font-family: var(--body);
+  font-size: clamp(10px,2.6vw,12px);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04));
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
+  transition: color .5s var(--ease-lux), box-shadow .5s var(--ease-lux), transform .3s var(--ease-lux);
+  box-shadow: 0 0 0 rgba(201,168,76,0), inset 0 0 0 rgba(201,168,76,0);
+  min-height: 48px;
+}
+.gold-btn::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: var(--gold);
+  transform: translateY(101%);
+  transition: transform .5s var(--ease-lux);
+  z-index: 0;
+}
+.gold-btn span { position: relative; z-index: 1; }
+.gold-btn:hover::before { transform: translateY(0); }
+.gold-btn:hover { color: var(--ivory); box-shadow: 0 8px 30px rgba(201,168,76,0.4); transform: translateY(-2px); }
+
+/* Eyebrow label */
+.eyebrow {
+  font-family: var(--body);
+  font-size: 10px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 500;
+}
+
+/* Section title */
+.section-title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  color: var(--charcoal);
+  line-height: 1.1;
+}
+
+/* ============================================================
+   OPENING SCREEN
+   ============================================================ */
+#opening {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #1a1208;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#opening-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+#opening-video.playing { opacity: 1; }
+
+@keyframes open-hint-pulse {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50%       { opacity: 0.55; transform: translateY(5px); }
+}
+@keyframes ring-pulse {
+  0%  { opacity: 0.75; transform: scale(1); }
+  70% { opacity: 0;    transform: scale(1.65); }
+  100%{ opacity: 0;    transform: scale(1.65); }
+}
+@keyframes tap-ring-breathe {
+  0%, 100% { transform: scale(1);   box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+  50%       { transform: scale(1.07); box-shadow: 0 0 20px 5px rgba(201,168,76,0.22); }
+}
+
+/* TAP TO OPEN overlay */
+#tap-hint {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 3.5vw, 24px);
+  pointer-events: none;
+  transition: opacity 0.7s ease;
+}
+#tap-hint .tap-ring {
+  width: clamp(76px, 21vw, 100px);
+  height: clamp(76px, 21vw, 100px);
+  border-radius: 50%;
+  border: 1.5px solid rgba(201,168,76,0.88);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: tap-ring-breathe 2.5s ease-in-out infinite;
+}
+#tap-hint .tap-ring::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.32);
+  animation: ring-pulse 2.3s ease-out infinite;
+}
+#tap-hint .tap-ring::after {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.13);
+  animation: ring-pulse 2.3s ease-out infinite 0.45s;
+}
+#tap-hint .tap-ring svg {
+  width: clamp(22px, 6vw, 30px);
+  height: clamp(22px, 6vw, 30px);
+  margin-left: 4px;
+}
+#tap-hint .tap-label {
+  font-family: var(--body);
+  font-size: clamp(10px, 2.8vw, 13px);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(253,250,243,0.88);
+  text-shadow: 0 1px 14px rgba(0,0,0,0.8);
+  animation: open-hint-pulse 2.5s ease-in-out infinite;
+}
+#tap-hint.hidden { opacity: 0; }
+
+/* Particle layer */
+#petal-layer {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+.petal {
+  position: absolute;
+  top: -5%;
+  opacity: .5;
+  will-change: transform;
+}
+
+/* ============================================================
+   MUSIC CONTROL
+   ============================================================ */
+#music-control {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 1000;
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: rgba(253,250,243,0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid var(--gold-soft);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 28px rgba(44,36,23,0.14);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .6s var(--ease-lux), transform .6s var(--ease-lux), box-shadow .3s ease;
+}
+#music-control.visible { opacity: 1; transform: translateY(0); }
+#music-control:hover { box-shadow: 0 12px 36px rgba(201,168,76,0.38); }
+#music-control svg { width: 20px; height: 20px; }
+#music-control.needs-tap { animation: musicPulse 1.7s ease-in-out infinite; }
+@keyframes musicPulse {
+  0%, 100% { box-shadow: 0 8px 28px rgba(44,36,23,0.14); }
+  50%       { box-shadow: 0 0 0 10px rgba(201,168,76,0.28); }
+}
+.disc { animation: spin 6s linear infinite; animation-play-state: paused; transform-origin: center; }
+.disc.spinning { animation-play-state: running; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ============================================================
+   HERO SECTION — full-screen ivory/gold floral background
+   ============================================================ */
+#hero {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  background: var(--ivory);
+}
+.hero-bg {
+  width: 100%;
+  height: 100svh;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: clamp(20px, 5vw, 60px) clamp(20px, 6vw, 80px);
+  text-align: center;
+}
+
+/* Invitation card overlay */
+.invitation-card {
+  background: rgba(253,250,243,0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(201,168,76,0.45);
+  border-radius: 4px;
+  padding: clamp(28px, 5vw, 60px) clamp(22px, 5vw, 70px);
+  max-width: clamp(320px, 88vw, 620px);
+  width: 100%;
+  box-shadow:
+    0 0 0 1px rgba(201,168,76,0.12),
+    0 0 0 8px rgba(201,168,76,0.06),
+    0 30px 70px rgba(44,36,23,0.12);
+  position: relative;
+}
+
+/* Corner ornaments */
+.invitation-card::before,
+.invitation-card::after {
+  content: "";
+  position: absolute;
+  width: 36px; height: 36px;
+  border-color: var(--gold);
+  border-style: solid;
+}
+.invitation-card::before {
+  top: 10px; left: 10px;
+  border-width: 1.5px 0 0 1.5px;
+}
+.invitation-card::after {
+  bottom: 10px; right: 10px;
+  border-width: 0 1.5px 1.5px 0;
+}
+/* Inner corner ornaments via extra elements */
+.card-corner-tr,
+.card-corner-bl {
+  position: absolute;
+  width: 36px; height: 36px;
+  border-color: var(--gold);
+  border-style: solid;
+}
+.card-corner-tr { top: 10px; right: 10px; border-width: 1.5px 1.5px 0 0; }
+.card-corner-bl { bottom: 10px; left: 10px; border-width: 0 0 1.5px 1.5px; }
+
+.hero-bismillah {
+  font-family: var(--arabic);
+  font-size: clamp(1.3rem, 4.5vw, 2rem);
+  color: var(--gold-deep);
+  font-weight: 700;
+  direction: rtl;
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.hero-quran {
+  font-family: var(--arabic);
+  font-size: clamp(0.85rem, 2.6vw, 1.15rem);
+  color: var(--charcoal-soft);
+  direction: rtl;
+  line-height: 1.9;
+  margin-bottom: 4px;
+}
+
+.hero-together {
+  font-family: var(--body);
+  font-size: clamp(9px, 2.2vw, 11px);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--charcoal-soft);
+  margin-bottom: 4px;
+}
+
+.hero-invite {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2.8vw, 1.35rem);
+  color: var(--charcoal-soft);
+  margin-bottom: 4px;
+  font-weight: 300;
+}
+
+.hero-of {
+  font-family: var(--body);
+  font-size: clamp(9px, 2.4vw, 11px);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 10px;
+}
+
+.hero-names {
+  line-height: 1;
+}
+.hero-name-bride,
+.hero-name-groom {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.7rem, 6.5vw, 3.4rem);
+  color: var(--charcoal);
+  display: block;
+  line-height: 1.05;
+}
+.hero-and {
+  font-family: var(--deco);
+  font-style: italic;
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  color: var(--gold);
+  display: block;
+  margin: 6px 0;
+}
+
+.hero-family {
+  font-family: var(--body);
+  font-size: clamp(9px, 2.2vw, 10.5px);
+  letter-spacing: 0.15em;
+  color: var(--charcoal-soft);
+  line-height: 2;
+  margin-top: 4px;
+}
+.hero-family strong {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--charcoal);
+  font-size: clamp(8px, 2vw, 10px);
+  display: block;
+}
+
+.hero-blessing-ar {
+  font-family: var(--arabic);
+  font-size: clamp(0.85rem, 2.6vw, 1.1rem);
+  color: var(--gold-deep);
+  direction: rtl;
+  line-height: 1.8;
+  margin-top: 4px;
+}
+
+.hero-blessing-en {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(0.75rem, 2.2vw, 0.95rem);
+  color: var(--charcoal-soft);
+  line-height: 1.6;
+}
+
+.hero-footer-ar {
+  font-family: var(--arabic);
+  font-size: clamp(0.9rem, 2.8vw, 1.15rem);
+  color: var(--gold-deep);
+  direction: rtl;
+  line-height: 1.8;
+}
+.hero-footer-en {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(0.7rem, 2vw, 0.88rem);
+  color: var(--charcoal-faint);
+  margin-top: 2px;
+}
+
+/* Scroll cue */
+.scroll-cue {
+  position: absolute;
+  bottom: 28px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(44,36,23,0.5);
+  z-index: 4;
+}
+.scroll-cue .line {
+  width: 1.5px; height: 40px;
+  background: linear-gradient(var(--gold), transparent);
+  animation: scroll-line 2s ease-in-out infinite;
+}
+@keyframes scroll-line {
+  0%    { transform: scaleY(0); transform-origin: top; }
+  50%   { transform: scaleY(1); transform-origin: top; }
+  50.01%{ transform-origin: bottom; }
+  100%  { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ============================================================
+   DETAILS SECTION — ivory/gold cards
+   ============================================================ */
+#details {
+  position: relative;
+  padding: clamp(80px, 10vw, 140px) 0;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+/* Subtle arabesque watermark */
+#details::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(201,168,76,0.06), transparent 50%),
+    radial-gradient(circle at 85% 50%, rgba(201,168,76,0.06), transparent 50%);
+  pointer-events: none;
+}
+
+.details-head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.details-head .eyebrow { margin-bottom: 10px; display: block; }
+.details-head .section-title { color: var(--charcoal); }
+
+/* Countdown bar */
+.details-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 2.5vw, 22px);
+  margin: 28px auto 0;
+  padding: clamp(16px, 2.5vw, 22px) clamp(18px, 4vw, 40px);
+  max-width: 460px;
+  background: var(--warm-white);
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(44,36,23,0.07);
+}
+.hc-unit { text-align: center; min-width: clamp(40px, 9vw, 56px); }
+.hc-num {
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1;
+}
+.hc-label {
+  font-family: var(--body);
+  font-size: clamp(7px, 1.8vw, 9px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-top: 6px;
+}
+.hc-sep {
+  color: var(--gold);
+  font-family: var(--display);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  opacity: .65;
+}
+
+/* Wedding detail cards */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  max-width: 840px;
+  margin: 56px auto 0;
+}
+@media (min-width: 680px) {
+  .details-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.detail-card {
+  background: var(--warm-white);
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  padding: clamp(32px, 4vw, 48px) clamp(20px, 3vw, 32px);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(36px);
+  transition: box-shadow .4s ease, transform .4s ease, border-color .4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.detail-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transition: transform .5s var(--ease-lux);
+}
+.detail-card:hover { box-shadow: 0 18px 44px rgba(201,168,76,0.18); transform: translateY(-5px); border-color: rgba(201,168,76,0.5); }
+.detail-card:hover::before { transform: scaleX(1); }
+
+.detail-icon { color: var(--gold); margin-bottom: 16px; }
+.detail-icon svg { width: 28px; height: 28px; margin: 0 auto; }
+.detail-label {
+  font-family: var(--body);
+  font-size: 9.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 10px;
+}
+.detail-main {
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 4vw, 1.7rem);
+  font-weight: 500;
+  color: var(--charcoal);
+}
+.detail-sub {
+  font-family: var(--body);
+  font-weight: 300;
+  font-size: 12.5px;
+  color: var(--charcoal-soft);
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   LOCATION SECTION — artwork banner
+   ============================================================ */
+#location {
+  width: 100%;
+  overflow: hidden;
+  background: var(--ivory);
+}
+.location-banner-img {
+  width: 100%;
+  height: 100svh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.location-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(40px, 7vh, 70px) clamp(20px, 5vw, 60px);
+  gap: 14px;
+  background: var(--ivory);
+}
+.location-title {
+  font-family: var(--body);
+  font-size: 10px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  text-align: center;
+}
+.location-name {
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+  font-weight: 500;
+  color: var(--charcoal);
+  text-align: center;
+  line-height: 1.2;
+}
+.location-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+/* ============================================================
+   FOOTER — artwork banner
+   ============================================================ */
+#footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--cream);
+  line-height: 0;
+}
+.footer-banner-img {
+  width: 100%;
+  height: 100svh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.footer-credit {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  font-family: var(--body);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(44,36,23,0.5);
+  z-index: 3;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* ============================================================
+   UTILITY — will-fade for GSAP
+   ============================================================ */
+.will-fade { opacity: 0; }
+
+/* ============================================================
+   MOBILE RESPONSIVE
+   ============================================================ */
+@media (max-width: 600px) {
+  .container { padding: 0 18px; }
+
+  .invitation-card {
+    padding: clamp(22px, 5vw, 32px) clamp(16px, 5vw, 24px);
+    max-width: 96vw;
+  }
+
+  .hero-bg { object-position: center center; }
+
+  #music-control { width: 48px; height: 48px; bottom: 18px; right: 18px; }
+
+  .location-btns { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 380px) {
+  .invitation-card {
+    padding: 18px 14px;
+  }
+  .hero-name-bride,
+  .hero-name-groom {
+    font-size: clamp(1.45rem, 8.5vw, 1.9rem);
+  }
+}
+
+/* ---- kill white gap after footer ---- */
+html, body { background: var(--cream); }
+footer#footer { display: block; margin: 0; padding: 0; }
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     OPENING SCREEN
+========================================================== -->
+<div id="opening">
+  <video id="opening-video" playsinline webkit-playsinline preload="none" muted poster="assets/video-poster.jpg">
+    <source src="assets/opening-video.mp4" type="video/mp4">
+  </video>
+  <!-- tap to open overlay -->
+  <div id="tap-hint">
+    <div class="tap-ring">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 4L20 12L6 20V4Z" fill="rgba(201,168,76,0.92)"/>
+      </svg>
+    </div>
+    <span class="tap-label">Tap to Open</span>
+  </div>
+</div>
+
+<!-- particle / petal layer -->
+<div id="petal-layer"></div>
+
+<!-- music control -->
+<button id="music-control" aria-label="Toggle music">
+  <svg class="disc" id="discIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="9" stroke="#C9A84C" stroke-width="1.3"/>
+    <circle cx="12" cy="12" r="2.5" fill="#C9A84C"/>
+    <path d="M12 7.5V9" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>
+    <path d="M12 15V16.5" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>
+    <path d="M7.5 12H9" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>
+    <path d="M15 12H16.5" stroke="#C9A84C" stroke-width="1" stroke-linecap="round"/>
+  </svg>
+</button>
+
+<!-- =========================================================
+     MAIN SITE
+========================================================== -->
+<div id="site">
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <img class="hero-bg" src="assets/hero-bismillah.png" alt="Niya Binsy &amp; Muhammed Farhan wedding invitation floral background">
+
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <!-- ===== WEDDING DETAILS ===== -->
+  <section id="details">
+    <div class="container">
+
+      <div class="details-head">
+        <span class="eyebrow">Join Us</span>
+        <div class="ornament" style="margin:12px auto 14px;">
+          <div class="ornament-line"></div>
+          <div class="ornament-diamond"></div>
+          <div class="ornament-line"></div>
+        </div>
+        <h2 class="section-title">Wedding Details</h2>
+
+        <!-- Countdown -->
+        <div class="details-countdown" data-fade>
+          <div class="hc-unit">
+            <div class="hc-num" id="hc-days">--</div>
+            <div class="hc-label">Days</div>
+          </div>
+          <div class="hc-sep">:</div>
+          <div class="hc-unit">
+            <div class="hc-num" id="hc-hours">--</div>
+            <div class="hc-label">Hours</div>
+          </div>
+          <div class="hc-sep">:</div>
+          <div class="hc-unit">
+            <div class="hc-num" id="hc-mins">--</div>
+            <div class="hc-label">Mins</div>
+          </div>
+          <div class="hc-sep">:</div>
+          <div class="hc-unit">
+            <div class="hc-num" id="hc-secs">--</div>
+            <div class="hc-label">Secs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        <!-- Date card -->
+        <div class="detail-card" data-fade>
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="5" width="18" height="16" rx="2" stroke="#C9A84C" stroke-width="1.3"/>
+              <path d="M3 10H21" stroke="#C9A84C" stroke-width="1.3"/>
+              <path d="M8 3V7M16 3V7" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="detail-label">Date</div>
+          <div class="detail-main">Saturday</div>
+          <div class="detail-sub">22 August 2026</div>
+        </div>
+
+        <!-- Nikah card -->
+        <div class="detail-card" data-fade>
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="#C9A84C" stroke-width="1.3"/>
+              <path d="M12 7V12L15 14.5" stroke="#C9A84C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="detail-label">Nikkah</div>
+          <div class="detail-main">10:30 AM</div>
+          <div class="detail-sub">Saturday, 22 August 2026</div>
+        </div>
+
+        <!-- Venue card -->
+        <div class="detail-card" data-fade>
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 21C12 21 5 14.2 5 9.5C5 5.91 8.13 3 12 3C15.87 3 19 5.91 19 9.5C19 14.2 12 21 12 21Z" stroke="#C9A84C" stroke-width="1.3"/>
+              <circle cx="12" cy="9.5" r="2.5" stroke="#C9A84C" stroke-width="1.3"/>
+            </svg>
+          </div>
+          <div class="detail-label">Venue</div>
+          <div class="detail-main">Chukkans</div>
+          <div class="detail-sub">Pukayoor</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LOCATION ===== -->
+  <section id="location">
+    <img class="location-banner-img" src="assets/map.png" alt="Chukkans Pukayoor location">
+    <div class="location-content" data-fade>
+      <div class="location-title">Location</div>
+      <div class="location-name">Chukkans Pukayoor</div>
+      <div class="location-btns">
+        <a class="gold-btn" id="viewLocationBtn" href="#" target="_blank" rel="noopener noreferrer">
+          <span>View Location</span>
+        </a>
+        <a class="gold-btn" id="mapsBtn" href="#" target="_blank" rel="noopener noreferrer">
+          <span>View Location in Maps</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <img class="footer-banner-img" src="assets/footer (3).png" alt="Niya Binsy &amp; Muhammed Farhan — 22 August 2026">
+  <div class="footer-credit">Niya Binsy &amp; Muhammed Farhan · 22.08.2026</div>
+</footer>
+
+<audio id="bgMusic" src="assets/wedding-song.mp3" loop preload="auto"></audio>
+
+<script>
+/* ============================================================
+   WEDDING CONFIGURATION — edit this object to update all text
+   ============================================================ */
+window.WEDDING_CONFIG = {
+  bride: {
+    name:   "NIYA BINSY. KT",
+    parent: "MOIDHEEN KUTTY. KT"
+  },
+  groom: {
+    name:   "MUHAMMED FARHAN. CP",
+    parent: "ASHRAF. CP"
+  },
+  event: {
+    date:        "2026-08-22",
+    time:        "10:30 AM",
+    dateISO:     "2026-08-22T10:30:00+05:30",  // IST target for countdown
+    dateDisplay: "22 August 2026",
+    day:         "Saturday",
+    type:        "Nikkah",
+    venue:       "Chukkans Pukayoor",
+    googleMapsUrl: ""  // paste Google Maps URL here when available
+  },
+  media: {
+    backgroundMusicUrl: "assets/wedding-song.mp3",
+    openingVideoUrl:    "assets/opening-video.mp4",
+    heroBg:             "assets/hero-bismillah.png",
+    mapBg:              "assets/map.png",
+    footerBg:           "assets/footer (3).png"
+  }
+};
+</script>
+
+<script>
+(function () {
+  "use strict";
+  const CFG = window.WEDDING_CONFIG;
+
+  /* ---------- wire up map buttons ---------- */
+  const mapsUrl = CFG.event.googleMapsUrl;
+  ['viewLocationBtn', 'mapsBtn'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.href = mapsUrl || '#';
+      if (!mapsUrl) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          // URL not yet configured
+        });
+      }
+    }
+  });
+
+  /* ---------- countdown (target: 22 Aug 2026 10:30 AM IST) ---------- */
+  const target = new Date(CFG.event.dateISO).getTime();
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function tickCountdown() {
+    const now  = Date.now();
+    const diff = Math.max(0, target - now);
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000)  / 60000);
+    const s = Math.floor((diff % 60000)    / 1000);
+    const dayEl = document.getElementById('hc-days');
+    const hrEl  = document.getElementById('hc-hours');
+    const mnEl  = document.getElementById('hc-mins');
+    const scEl  = document.getElementById('hc-secs');
+    if (dayEl) dayEl.textContent = d;
+    if (hrEl)  hrEl.textContent  = pad(h);
+    if (mnEl)  mnEl.textContent  = pad(m);
+    if (scEl)  scEl.textContent  = pad(s);
+  }
+  tickCountdown();
+  setInterval(tickCountdown, 1000);
+
+  /* ---------- gold particles ---------- */
+  const petalLayer = document.getElementById('petal-layer');
+  function makePetal() {
+    const p = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    p.setAttribute('viewBox', '0 0 20 20');
+    p.setAttribute('class', 'petal');
+    const isLeaf = Math.random() > 0.5;
+    p.innerHTML = isLeaf
+      ? `<path d="M10 1C13 5 19 7 19 12C19 16 15 19 10 19C5 19 1 16 1 12C1 7 7 5 10 1Z" fill="#C9A84C" opacity="0.45"/>`
+      : `<circle cx="10" cy="10" r="3" fill="#E5C97A" opacity="0.4"/>`;
+    const size = 5 + Math.random() * 11;
+    p.style.width  = size + 'px';
+    p.style.height = size + 'px';
+    p.style.left   = Math.random() * 100 + '%';
+    petalLayer.appendChild(p);
+    const duration = 14 + Math.random() * 10;
+    const drift    = (Math.random() - 0.5) * 140;
+    if (window.gsap) {
+      gsap.fromTo(p,
+        { y: -40, rotate: 0, opacity: 0.55 },
+        { y: window.innerHeight + 60, x: `+=${drift}`, rotate: 360 * (Math.random() > 0.5 ? 1 : -1), opacity: 0,
+          duration, ease: 'none', onComplete: () => p.remove() }
+      );
+    } else { p.remove(); }
+  }
+  let petalInterval = null;
+
+  /* ---------- music control ---------- */
+  const audio    = document.getElementById('bgMusic');
+  const musicBtn = document.getElementById('music-control');
+  const disc     = document.getElementById('discIcon');
+  let isPlaying  = false;
+
+  if (CFG.media.backgroundMusicUrl &&
+      audio.src !== new URL(CFG.media.backgroundMusicUrl, location.href).href) {
+    audio.src = CFG.media.backgroundMusicUrl;
+  }
+  audio.volume = 0.45;
+
+  let retryAttached = false;
+
+  function startMusic() {
+    const p = audio.play();
+    if (!p || !p.then) {
+      isPlaying = true;
+      disc.classList.add('spinning');
+      musicBtn.classList.remove('needs-tap');
+      return;
+    }
+    p.then(() => {
+      isPlaying = true;
+      disc.classList.add('spinning');
+      musicBtn.classList.remove('needs-tap');
+    }).catch(() => {
+      isPlaying = false;
+      disc.classList.remove('spinning');
+      musicBtn.classList.add('needs-tap');
+      attachAutoRetry();
+    });
+  }
+
+  function attachAutoRetry() {
+    if (retryAttached) return;
+    retryAttached = true;
+    const tryAgain = () => {
+      if (isPlaying) {
+        document.removeEventListener('click',    tryAgain);
+        document.removeEventListener('touchend', tryAgain);
+        document.removeEventListener('scroll',   tryAgain);
+        retryAttached = false;
+        return;
+      }
+      audio.play().then(() => {
+        isPlaying = true;
+        disc.classList.add('spinning');
+        musicBtn.classList.remove('needs-tap');
+        document.removeEventListener('click',    tryAgain);
+        document.removeEventListener('touchend', tryAgain);
+        document.removeEventListener('scroll',   tryAgain);
+        retryAttached = false;
+      }).catch(() => { /* still blocked */ });
+    };
+    document.addEventListener('click',    tryAgain);
+    document.addEventListener('touchend', tryAgain, { passive: true });
+    document.addEventListener('scroll',   tryAgain, { passive: true });
+  }
+
+  musicBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+      disc.classList.remove('spinning');
+    } else {
+      if (musicBtn._gainNode) {
+        audio.play().catch(() => {});
+        musicBtn._gainNode.gain.setValueAtTime(0, musicBtn._audioCtx.currentTime);
+        musicBtn._gainNode.gain.linearRampToValueAtTime(0.45, musicBtn._audioCtx.currentTime + 0.5);
+        isPlaying = true;
+        disc.classList.add('spinning');
+      } else {
+        startMusic();
+      }
+    }
+  });
+
+  /* ---------- opening → reveal ---------- */
+  const opening      = document.getElementById('opening');
+  const openingVideo = document.getElementById('opening-video');
+  const tapHint      = document.getElementById('tap-hint');
+  let opened         = false;
+
+  function onTouchEnd(e) {
+    e.preventDefault();
+    openInvitation();
+  }
+
+  function openInvitation() {
+    if (opened) return;
+    opened = true;
+
+    tapHint.classList.add('hidden');
+    document.removeEventListener('click',    openInvitation);
+    document.removeEventListener('touchend', onTouchEnd);
+
+    /* ── AudioContext unlock ────────────────────────────────── */
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+      // Bell chime tones on open
+      [[880, 0], [1108, 0.05], [1318, 0.1]].forEach(([freq, delay]) => {
+        const osc  = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0, ctx.currentTime + delay);
+        gain.gain.linearRampToValueAtTime(0.32, ctx.currentTime + delay + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + delay + 2.4);
+        osc.start(ctx.currentTime + delay);
+        osc.stop(ctx.currentTime  + delay + 2.4);
+      });
+
+      // Route wedding song through AudioContext
+      const musicSource = ctx.createMediaElementSource(audio);
+      const musicGain   = ctx.createGain();
+      musicSource.connect(musicGain);
+      musicGain.connect(ctx.destination);
+      musicGain.gain.setValueAtTime(0, ctx.currentTime);
+      audio.volume = 1;
+      musicBtn._gainNode = musicGain;
+      musicBtn._audioCtx = ctx;
+
+    } catch (err) {
+      // Web Audio API unavailable — fallback handled in completeOpening()
+    }
+
+    openingVideo.muted       = true;
+    openingVideo.currentTime = 0.5;
+
+    let started        = false;
+    const fallbackTimer = setTimeout(() => { if (!started) completeOpening(); }, 7000);
+
+    openingVideo.addEventListener('playing', function onPlaying() {
+      started = true;
+      clearTimeout(fallbackTimer);
+      openingVideo.classList.add('playing');
+      openingVideo.removeEventListener('playing', onPlaying);
+    });
+
+    openingVideo.play().catch(err => {
+      console.warn('Video play failed:', err);
+      clearTimeout(fallbackTimer);
+      completeOpening();
+    });
+
+    musicBtn.classList.add('visible');
+  }
+
+  document.addEventListener('click',    openInvitation);
+  document.addEventListener('touchend', onTouchEnd, { passive: false });
+  openingVideo.addEventListener('ended', completeOpening);
+
+  function completeOpening() {
+    // Fade video audio before transition
+    if (openingVideo && !openingVideo.paused) {
+      const ramp = setInterval(() => {
+        if (openingVideo.volume > 0.05) {
+          openingVideo.volume = Math.max(0, openingVideo.volume - 0.08);
+        } else {
+          openingVideo.volume = 0;
+          openingVideo.muted  = true;
+          clearInterval(ramp);
+        }
+      }, 40);
+    }
+
+    // Start wedding music after video
+    if (!isPlaying) {
+      if (musicBtn._gainNode && musicBtn._audioCtx) {
+        const ctx2 = musicBtn._audioCtx;
+        musicBtn._gainNode.gain.setValueAtTime(0, ctx2.currentTime);
+        musicBtn._gainNode.gain.linearRampToValueAtTime(0.45, ctx2.currentTime + 1.6);
+        audio.play().then(() => {
+          isPlaying = true;
+          disc.classList.add('spinning');
+          musicBtn.classList.remove('needs-tap');
+        }).catch(() => {
+          musicBtn.classList.add('needs-tap');
+          attachAutoRetry();
+        });
+      } else {
+        startMusic();
+      }
+    }
+
+    if (window.gsap) {
+      gsap.to(opening, {
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.inOut',
+        onComplete: () => {
+          opening.style.display = 'none';
+          initSiteAnimations();
+          musicBtn.classList.add('visible');
+          petalInterval = setInterval(makePetal, 1000);
+          for (let i = 0; i < 5; i++) setTimeout(makePetal, i * 200);
+        }
+      });
+    } else {
+      opening.style.display = 'none';
+      initSiteAnimations();
+    }
+  }
+
+  /* ---------- scroll animations ---------- */
+  let siteInited = false;
+  function initSiteAnimations() {
+    if (siteInited) return;
+    siteInited = true;
+
+    // Lenis smooth scroll
+    if (window.Lenis) {
+      const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+      if (window.gsap && window.ScrollTrigger) {
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add(time => { lenis.raf(time * 1000); });
+        gsap.ticker.lagSmoothing(0);
+      } else {
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+      }
+    }
+
+    if (!window.gsap || !window.ScrollTrigger) return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero invitation card — staggered fade-up
+    const cardEl = document.querySelector('[data-invite-card]');
+    if (cardEl) {
+      const fadeEls = cardEl.querySelectorAll('[data-fade]');
+      gsap.set(fadeEls, { opacity: 0, y: 22 });
+      gsap.to(fadeEls, {
+        opacity: 1, y: 0,
+        duration: 1.0,
+        stagger: 0.1,
+        ease: 'power3.out',
+        delay: 0.3
+      });
+    }
+
+    // Detail cards
+    document.querySelectorAll('.detail-card').forEach(el => {
+      gsap.fromTo(el, { opacity: 0, y: 40 }, {
+        opacity: 1, y: 0, duration: 1.0, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 86%' }
+      });
+    });
+
+    // Countdown fade
+    const cdEl = document.querySelector('.details-countdown');
+    if (cdEl) {
+      gsap.fromTo(cdEl, { opacity: 0, y: 24 }, {
+        opacity: 1, y: 0, duration: 1.0, ease: 'power3.out',
+        scrollTrigger: { trigger: cdEl, start: 'top 88%' }
+      });
+    }
+
+    // Location content
+    const locContent = document.querySelector('.location-content');
+    if (locContent) {
+      gsap.fromTo(locContent, { opacity: 0, y: 30 }, {
+        opacity: 1, y: 0, duration: 1.1, ease: 'power3.out',
+        scrollTrigger: { trigger: locContent, start: 'top 90%' }
+      });
+    }
+  }
+
+})();
+</script>
+</body>
+</html>
